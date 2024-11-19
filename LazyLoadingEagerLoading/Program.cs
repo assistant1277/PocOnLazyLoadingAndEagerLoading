@@ -4,8 +4,7 @@ using LazyLoadingEagerLoading.Mappers;
 using LazyLoadingEagerLoading.Repositories;
 using LazyLoadingEagerLoading.Services;
 using Microsoft.EntityFrameworkCore;
-//using System.Text.Json.Serialization;
-
+using System.Text.Json.Serialization;
 
 //UseLazyLoadingProxies()-> it tells entity framework to create helper objects for your entity classes
 //when you try to access related entity eg-> author from book that hasn not been loaded yet and helper automatically fetches data from database
@@ -34,10 +33,11 @@ namespace LazyLoadingEagerLoading
 
             builder.Services.AddControllers();
 
-            //builder.Services.AddControllers().AddJsonOptions(x =>
-            //{
-            //    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-            //});
+            builder.Services.AddControllers().AddJsonOptions(x =>
+            {
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+            });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
