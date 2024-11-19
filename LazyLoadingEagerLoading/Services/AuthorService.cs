@@ -17,7 +17,6 @@ namespace LazyLoadingEagerLoading.Services
             _authorRepository = authorRepository;
             _mapper = mapper;
         }
-
         
         //lazy load-> it returns authors with books using lazy loading
         public List<AuthorDto> GetAuthorsWithBooksLazy()

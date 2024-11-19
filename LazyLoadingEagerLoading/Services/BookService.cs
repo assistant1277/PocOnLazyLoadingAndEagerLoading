@@ -12,7 +12,7 @@ namespace LazyLoadingEagerLoading.Services
         private readonly IRepository<Book> _bookRepository;
         private readonly IMapper _mapper;
 
-        public BookService(IRepository<Book> bookRepository, IMapper mapper)
+        public BookService(IRepository<Book> bookRepository,IMapper mapper)
         {
             _bookRepository = bookRepository;
             _mapper = mapper;

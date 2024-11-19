@@ -8,8 +8,8 @@ namespace LazyLoadingEagerLoading.Mappers
     {
         public MappingProfile()
         {
-            CreateMap<Author, AuthorDto>();
-            CreateMap<Book, BookDto>();
+            CreateMap<Author,AuthorDto>();
+            CreateMap<Book,BookDto>();
         }
     }
 }
